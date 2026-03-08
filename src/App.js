@@ -9,23 +9,33 @@ function App() {
   const [refresh, setRefresh] = useState(0);
 
   return (
-    <div className="container">
-      <h2>Bank Statement Transaction System</h2>
+    <div className="app-wrapper">
+      {/* ── Header ── */}
+      <header className="app-header">
+        <div className="app-header-left">
+          <div className="header-logo">💳</div>
+          <div>
+            <div className="app-title">
+              Bank<span>Lens</span>
+            </div>
+            <div className="app-subtitle">Transaction Analytics</div>
+          </div>
+        </div>
+        <div className="header-badge">LIVE DASHBOARD</div>
+      </header>
 
-      <div className="section">
+      <div className="dashboard-grid">
+        {/* ── Upload ── */}
         <UploadFile onUploadSuccess={() => setRefresh(refresh + 1)} />
-      </div>
 
-      <div className="section">
+        {/* ── Transactions Table ── */}
         <Transactions refresh={refresh} />
-      </div>
 
-      <div className="section">
-        <CategoryChart />
-      </div>
-
-      <div className="section">
-        <MonthlyChart />
+        {/* ── Charts ── */}
+        <div className="charts-row">
+          <CategoryChart />
+          <MonthlyChart />
+        </div>
       </div>
     </div>
   );
