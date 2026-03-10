@@ -16,7 +16,7 @@ function App() {
           <div className="header-logo">💳</div>
           <div>
             <div className="app-title">
-              Bank<span>Lens</span>
+              Bank<span>Statement</span>
             </div>
             <div className="app-subtitle">Transaction Analytics</div>
           </div>
