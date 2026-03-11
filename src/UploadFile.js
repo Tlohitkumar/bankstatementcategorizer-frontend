@@ -51,14 +51,14 @@ function UploadFile({ onUploadSuccess }) {
         <input
           className="file-input"
           type="file"
-          accept=".csv,.xlsx,.xls"
+          accept=".pdf,.doc,.docx,.csv,.xlsx,.xls"
           onChange={handleFileChange}
         />
         <span className="upload-icon">📄</span>
         <div className="upload-label">
           {file ? "Change file" : "Drop your statement here"}
         </div>
-        <div className="upload-hint">Supports CSV, XLS, XLSX</div>
+        <div className="upload-hint">Supports PDF, DOC, CSV, XLS, XLSX</div>
       </div>
 
       {file && (
